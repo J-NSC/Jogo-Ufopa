@@ -11,6 +11,8 @@ public class EnemyLog : Enemy
     // [SerializeField]
     // private Image barLife;
     // Start is called before the first frame update
+    
+    
     public override void Start()
     {
         base.Start();
@@ -31,7 +33,7 @@ public class EnemyLog : Enemy
         }else {
             voltar();
         }
-
+        
         MostraBarEnemy();
 
     }
@@ -46,6 +48,7 @@ public class EnemyLog : Enemy
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, infEn.raioVisao);
         Gizmos.DrawWireSphere(transform.position, infEn.raioAtaque);
+        
     }
 
   
@@ -73,4 +76,5 @@ public class EnemyLog : Enemy
             transform.up = (infEn.player.transform.position - transform.position) * -1;
         }
     }
+
 }
